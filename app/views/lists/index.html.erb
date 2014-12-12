@@ -1,0 +1,8 @@
+<% @lists.each do |list| %>
+	<h2 class="title"><%= link_to list.title, list %></h2>
+	<p class="list_sub_title"><%= list.description %></p>
+<% end %>
+
+<div class="links">
+	<%= link_to "New Todo List", new_list_path %>
+</div>

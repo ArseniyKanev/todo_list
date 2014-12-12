@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<% if user_signed_in? %>
+	<div class="links">
+		<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+	</div>
+<% end %>
+
+<div class="container">
+<div class="error"><%= flash.now[:error] %></div>
+<div class="error"><%= flash.now[:alert] %></div>
+	<%= yield %>
+</div>
+
+</body>
+</html>
