@@ -1,1 +1,1 @@
-https://doitjust.herokuapp.com/
+https://doitjust.herokuapp.com
